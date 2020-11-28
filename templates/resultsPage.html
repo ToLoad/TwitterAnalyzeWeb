@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twitter Text Analyze</title>
+    <style>
+        section {
+          display:grid;
+          gap:20px;
+          grid-template-columns: repeat(2, 1fr);
+    }
+    </style>
+  </head>
+
+  <body>
+    <h1>Search Results</h1>
+    <h3>Found {{resultsNumber}} result for {{searchingBy}}</h3>
+      <section>
+        <h4>Text</h4>
+        <h4>SentimentScore</h4>
+        {% for result in text_analyze %}
+          <span>{{result.text}}</span>
+          <span>{{result.sentimentscore}}</span>
+        {% endfor %}
+      <section>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Twitter Text Analyze</title>
+	<link href="/static/css/main.css" rel="stylesheet">
+
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet' />
+    <style>
+        html {
+            background: #1f80aa;
+        }
+
+        body {
+            width: 300px;
+            margin: 0 auto;
+            padding-top: 8rem;
+        }
+
+        fieldset {
+            position: relative;
+            display: inline-block;
+            padding: 0 0 0 10px;
+            background: #fff;
+            border: none;
+            
+            border-radius: 5px;
+        }
+
+        input,
+        button {
+            position: relative;
+            width: 200px;
+            height: 50px;
+            padding: 0;
+            display: inline-block;
+            float: left;
+        }
+
+        input {
+            color: #666;
+            z-index: 2;
+            border: 0 none;
+        }
+
+        input:focus {
+            outline: 0 none;
+        }
+
+        button {
+            z-index: 1;
+            width: 50px;
+            border: 0 none;
+            background: #d8d8d8;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .fa-search {
+            font-size: 1.4rem;
+            color: #29abe2;
+            z-index: 3;
+            top: 25%;
+        }
+    </style>
+
+</head>
+
+<body translate="no">
+	<div id="loading" style="display: none;">
+		<img src="/static/image/loading.gif" alt="loading">
+    </div>
+    <div style="text-align: center;">
+	    <h1>Twitter Text Analyze</h1>
+        <form action="/results" method="get">
+            <fieldset><input type="search" placeholder="Type to keyword" required name="keyword"/>
+                <button id="click" type="submit"><i class="fa fa-search"></i></button></fieldset>
+        </form>
+        <br>
+        <p><h3>When you search for a keyword, you get the latest tweet that corresponds to the keyword from Twitter and analyze it through Google Natural Language API.</p>
+        <p>API analyzes whether people's response to keywords is positive or negative.</p></h3>
+        <br>
+        <h2>Using :</h2>
+        <br>
+        <img src="/static/image/flask.png" alt="flask" width="150">&emsp;
+        <img src="/static/image/googlec.png" alt="googlec" width="150">
+        <br>
+        <br>
+        <img src="/static/image/python.png" alt="python" width="100">&emsp;
+        <img src="/static/image/twitter.png" alt="twitter" width="100">
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $("#click").click(function() {
+            $("#loading").show();
+        });
+    </script>
+  </body>
+</html>
+
+<!--https://codepen.io/arlinacode/pen/KwjrXe-->
